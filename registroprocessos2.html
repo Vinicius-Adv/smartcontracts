@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilo.css" />
+    <title>Apresentação Final</title>
+  </head>
+  <body onload="autoLoadOwner()">
+    <header>
+      <h1>Processos</h1>
+    </header>
+    <hr />
+    <section>
+      <div>
+        <h3>Advogado(a): <span id="spanOwner"></span></h3>
+      </div>
+      <div>
+        Número relativo do contrato:
+        <input type="number" name="contractNumber" id="contractNumber" size="10" min="1" max="99999999" />
+        <button onclick="getRegisterContractData()">Buscar Dados</button>
+      </div>
+      <br />
+      <div>Endereço Ethereum do autor da causa: <span id="autor"></span></div>
+      <div>Endereço Ethereum do reu: <span id="reu"></span></div>
+      <div>Causa: <span id="causa"></span></div>
+      <div>Valor da causa: <span id="valordacausa"></span></div>
+      <div>Prazo final: <span id="prazofinal"></span></div>
+    </section>
+    <script
+      type="text/javascript"
+      integrity="sha384-dq8L5gpIcUoGAeHh/6setfxuuDI0ngshPvCvksSAcQMMWCr5cVFAaijT//nxVyjb"
+      crossorigin="anonymous"
+      src="https://cdn-cors.ethers.io/lib/ethers-5.4.0.umd.min.js"
+    ></script>
+    <script src="abi.js"></script>
+    <script src="functions.js"></script>
+    <script>
+      console.log("Conectando. Por favor, aguarde.");
+      try {
+        const connectionProvider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = connectionProvider.getSigner();
+        smartContract = new ethers.Contract(contractAddress, ABI, connectionProvider);
+        smartContractWithSigner = smartContract.connect(signer);
+        console.log("Conectado ao Smart Contract no Ethereum via Metamask.");
+      } catch (err) {
+        console.log("Error");
+        console.error(err);
+      }
+    </script>
+  </body>
+</html>
