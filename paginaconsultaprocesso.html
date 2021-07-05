@@ -19,7 +19,7 @@
       <div>
         Número relativo do contrato:
         <input type="number" name="contractNumber" id="contractNumber" size="10" min="1" max="99999999" />
-        <button onclick="getRentalContractData()">Buscar Dados</button>
+        <button onclick="getRegisterContractData()">Buscar Dados</button>
       </div>
       <br />
       <div>Endereço Ethereum do autor da causa: <span id="autor"></span></div>
@@ -34,8 +34,8 @@
       crossorigin="anonymous"
       src="https://cdn-cors.ethers.io/lib/ethers-5.4.0.umd.min.js"
     ></script>
-    <script src="dado-contrato-no-ethereum.js"></script>
-    <script src="funcoes-contrato-ethereum.js"></script>
+    <script src="ABI.js"></script>
+    <script src="functions.js"></script>
     <script>
       console.log("Conectando. Por favor, aguarde.");
       try {
