@@ -14,7 +14,7 @@
     <hr />
     <section>
       <div>
-        <h2>Advogado(a): <span id="spanOwner"></span></h2>
+        <h3>Advogado(a): <span id="spanOwner"></span></h3>
       </div>
       <div>
         Número relativo do contrato:
@@ -34,14 +34,13 @@
       crossorigin="anonymous"
       src="https://cdn-cors.ethers.io/lib/ethers-5.4.0.umd.min.js"
     ></script>
-    <script src="ABI.js"></script>
+    <script src="abi.js"></script>
     <script src="functions.js"></script>
     <script>
       console.log("Conectando. Por favor, aguarde.");
       try {
         const connectionProvider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = connectionProvider.getSigner();
-        //sc = smart contract
         smartContract = new ethers.Contract(contractAddress, ABI, connectionProvider);
         smartContractWithSigner = smartContract.connect(signer);
         console.log("Conectado ao Smart Contract no Ethereum via Metamask.");
