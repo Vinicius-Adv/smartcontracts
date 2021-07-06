@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt">
   <head>
     <meta charset="UTF-8" />
@@ -22,9 +23,11 @@
         <button onclick="getRegisterContractData()">Buscar Dados</button>
       </div>
       <br />
-      <div>Endereço Ethereum do autor da causa: <span id="autor"></span></div>
-      <div>Endereço Ethereum do reu: <span id="reu"></span></div>
+      <div>Endereço Ethereum do cliente: <span id="cliente"></span></div>
+      <div>Endereço Ethereum da outra parte: <span id="partecontraria"></span></div>
+      <div>Litisconsorcio? <span id="litisconsorcio"></span></div>
       <div>Causa: <span id="causa"></span></div>
+      <div>Acordo? <span id="acordo"></span></div>
       <div>Valor da causa: <span id="valordacausa"></span></div>
       <div>Prazo final: <span id="prazofinal"></span></div>
     </section>
@@ -34,7 +37,7 @@
       crossorigin="anonymous"
       src="https://cdn-cors.ethers.io/lib/ethers-5.4.0.umd.min.js"
     ></script>
-    <script src="abi.js"></script>
+    <script src="ABI.js"></script>
     <script src="functions.js"></script>
     <script>
       console.log("Conectando. Por favor, aguarde.");
