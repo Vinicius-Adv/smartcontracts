@@ -3,8 +3,8 @@ br {
 }
 
 label {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2vh;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 3vh;
 }
 body {
   background-color: black;
@@ -19,8 +19,6 @@ h3 {
 }
 
 div {
- color: white
+ color: rgb(255, 255, 255)
 }
-form {
- color: white
-}
+
